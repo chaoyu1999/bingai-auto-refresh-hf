@@ -1,7 +1,7 @@
 name: HuggingFace Auto Refresh
 on:
   schedule:
-    - cron: '0 */3 * * *' # 每隔 3 小时执行一次
+    - cron: '0 */12 * * *' # 每隔 3 小时执行一次
   workflow_dispatch:
 
 jobs:

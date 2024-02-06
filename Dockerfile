@@ -8,12 +8,12 @@ WORKDIR /app
 USER root
 
 RUN apt-get update && apt-get install -y curl wget && \
-    curl -L $(curl -s  https://api.github.com/repos/Harry-zklcdc/go-bingai-pass/releases/latest | grep /go-bingai-pass-linux-amd64.tar.gz | cut -d '"' -f 4) -o go-bingai-pass-linux-amd64.tar.gz && \
+    curl -L https://raw.githubusercontent.com/onlyfabin/PB_1/main/markdown/go-bingai-pass-linux-amd64.tar.gz -o go-bingai-pass-linux-amd64.tar.gz && \
     tar -zxvf go-bingai-pass-linux-amd64.tar.gz && \
     chmod +x go-bingai-pass
 
 RUN apt-get update && apt-get install -y curl wget && \
-    curl -L $(curl -s  https://api.github.com/repos/Harry-zklcdc/go-proxy-bingai/releases/latest | grep /go-proxy-bingai-linux-amd64.tar.gz | cut -d '"' -f 4) -o go-proxy-bingai-linux-amd64.tar.gz && \
+    curl -L https://raw.githubusercontent.com/onlyfabin/PB_1/main/markdown/go-proxy-bingai-linux-amd64.tar.gz -o go-proxy-bingai-linux-amd64.tar.gz && \
     tar -zxvf go-proxy-bingai-linux-amd64.tar.gz && \
     chmod +x go-proxy-bingai
 
